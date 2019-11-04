@@ -72,15 +72,21 @@ $gradient: linear-gradient(306deg, rgba(54, 54, 54, 0.05) 0%, rgba(54, 54, 54, 0
 
 .dropdown {
     margin-top: 2em;
-    left:40%;
 }
 
-// @media (max-width: 655px) {
-   
-// }
+@media (max-width: 655px) {
+    .dropdown {
+        left:30%;
+
+    }
+}
 
 @media (min-width: 656px) {
     .menu-label {
         font-size: 2em;
+    }
+
+    .dropdown {
+        left:45%;
     }
 }

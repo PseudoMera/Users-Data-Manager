@@ -8,9 +8,8 @@ export const Sidebar = (props) => {
     return (
         <aside className="menu">
             <p className="menu-label">{user ? user : "No name"}</p>
-            <hr/>
             <img className="image" src={profileLogo} alt="user profile"/>
-            
+
             <div className="dropdown">
                 <div className="dropdown-trigger">
                     <button className="button" 
@@ -18,13 +17,13 @@ export const Sidebar = (props) => {
                     aria-controls="dropdown-menu"
                     onClick={() => {
                         let dd = document.getElementsByClassName("dropdown")[0];
-                        console.log(dd)
                         dd.classList.toggle("is-active");
                     }}>
                     <span className="icon is-small">
                         <i className="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
                     </button>
+
                 </div>
 
                 <div className="dropdown-menu" id="dropdown-menu" role="menu">
@@ -35,7 +34,8 @@ export const Sidebar = (props) => {
                     </div>
                 </div>
             </div>
-            
+            <hr/>
+
             <ul className="menu-list">
                 <li>
                     <Link to="/home">
