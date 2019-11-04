@@ -1,5 +1,6 @@
 import React from 'react';
 import {Sidebar} from '../components/Sidebar';
+import {AddUser} from '../components/AddUserForm';
 
 export const homePage = (props) => {
     return (
@@ -7,6 +8,7 @@ export const homePage = (props) => {
            <Sidebar 
            user={props.location.state.user} 
            profileLogo={props.location.state.profileLogo}/>
+           <AddUser/>
         </div>
     );
 }
