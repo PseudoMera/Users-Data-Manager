@@ -1,0 +1,81 @@
+$menu-label-color: white;
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+$container-width: 45vw;
+$container-position: absolute;
+$container-margin:50%;
+$container-transform: translate(-50%, -50%);
+$gradient: linear-gradient(306deg, rgba(54, 54, 54, 0.05) 0%, rgba(54, 54, 54, 0.05) 33.333%,rgba(85, 85, 85, 0.05) 33.333%, rgba(85, 85, 85, 0.05) 66.666%,rgba(255, 255, 255, 0.05) 66.666%, rgba(255, 255, 255, 0.05) 99.999%),linear-gradient(353deg, rgba(81, 81, 81, 0.05) 0%, rgba(81, 81, 81, 0.05) 33.333%,rgba(238, 238, 238, 0.05) 33.333%, rgba(238, 238, 238, 0.05) 66.666%,rgba(32, 32, 32, 0.05) 66.666%, rgba(32, 32, 32, 0.05) 99.999%),linear-gradient(140deg, rgba(192, 192, 192, 0.05) 0%, rgba(192, 192, 192, 0.05) 33.333%,rgba(109, 109, 109, 0.05) 33.333%, rgba(109, 109, 109, 0.05) 66.666%,rgba(30, 30, 30, 0.05) 66.666%, rgba(30, 30, 30, 0.05) 99.999%),linear-gradient(189deg, rgba(77, 77, 77, 0.05) 0%, rgba(77, 77, 77, 0.05) 33.333%,rgba(55, 55, 55, 0.05) 33.333%, rgba(55, 55, 55, 0.05) 66.666%,rgba(145, 145, 145, 0.05) 66.666%, rgba(145, 145, 145, 0.05) 99.999%),linear-gradient(90deg, rgb(9, 201, 186),rgb(18, 131, 221));  
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    max-width: $container-width;
+    position: $container-position;
+    top: $container-margin;
+    left: $container-margin;
+    transform: $container-transform;
+}
+
+.custom-container {
+    width: 100vw;
+    height: 100vh;
+    background: $gradient;
+}
+
+.home-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.signin-button {
+    width:25vw;
+}
+
+.menu {
+    height:100vh;
+    background:$gradient;
+    width: 25vw;
+    padding-top:2em;
+}
+
+.menu-label {
+    text-align: center;
+}
+
+.menu-list li {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.menu-list li a {
+    color:white;
+}
+
+
+.image {
+    max-width: 15vw;
+    max-height: 15vw;
+    left: 20%;
+}
+
+@media (max-width: 655px) {
+   
+}
+
+@media (min-width: 656px) {
+    .menu-label {
+        font-size: 2em;
+    }
+}
