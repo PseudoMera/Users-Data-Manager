@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 export const Sidebar = (props) => {
     const {user, profileLogo} = props;
@@ -37,18 +36,21 @@ export const Sidebar = (props) => {
             <hr/>
 
             <ul className="menu-list">
-                <li>
-                    <Link to="/home">
+                <li onClick={
+                    () => {
+                        let addContainer = document.getElementsByClassName("useless-class")[0];
+                        addContainer.classList.toggle("is-hidden");
+                    }
+                }>
                     Add user
-                    </Link>
                 </li>
 
-                <li>
-                    <Link to="/home">
+                <li onClick={() => {
+                    let listContainer = document.getElementsByClassName("second-useless-class")[0];
+                    listContainer.classList.toggle("is-hidden");
+                }}>
                     List of users
-                    </Link>
                 </li>
-
             </ul>
         </aside>
     );
