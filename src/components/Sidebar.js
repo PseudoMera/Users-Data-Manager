@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export const Sidebar = (props) => {
     const {user, profileLogo} = props;
@@ -7,8 +8,15 @@ export const Sidebar = (props) => {
     return (
         <aside className="menu">
             <p className="menu-label">{user ? user : "No name"}</p>
-            <img className="image" src={profileLogo} alt="user profile"/>
-
+            <Link to={{
+                pathname:"/home",
+                state: {
+                    user,
+                    profileLogo
+                }
+            }}>
+                <img className="image" src={profileLogo} alt="user profile"/>
+            </Link>
             <div className="dropdown">
                 <div className="dropdown-trigger">
                     <button className="button" 
@@ -40,6 +48,10 @@ export const Sidebar = (props) => {
                     () => {
                         let addContainer = document.getElementsByClassName("useless-class")[0];
                         addContainer.classList.toggle("is-hidden");
+                        let temp = document.getElementsByClassName("second-useless-class")[0];
+                        if(temp.className[37] !== 'i') {
+                            temp.classList.toggle("is-hidden");
+                        }
                     }
                 }>
                     Add user
@@ -48,6 +60,10 @@ export const Sidebar = (props) => {
                 <li onClick={() => {
                     let listContainer = document.getElementsByClassName("second-useless-class")[0];
                     listContainer.classList.toggle("is-hidden");
+                    let temp = document.getElementsByClassName("useless-class")[0];
+                    if(temp.className[30] !== 'i') {
+                        temp.classList.toggle("is-hidden");
+                    }
                 }}>
                     List of users
                 </li>

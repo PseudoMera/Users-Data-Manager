@@ -1,9 +1,16 @@
 import React from 'react';
+import {Pagination} from '../components/Pagination';
+
 
 export const ListOfUsers = (props) => {
+    const {users, userPerPage, totalUsers, paginate} = props;
+
+    
+
     return (
         <div className="right-container second-useless-class is-hidden">
-            {props.users.length > 0 ? 
+        <h1 className="title">List of users</h1>
+            {users.length > 0 ? 
          <table className="table">
                 <thead>
                     <tr>
@@ -14,8 +21,8 @@ export const ListOfUsers = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-            {props.users.map((user, index) =>
-                    <tr key={Math.floor(Math.floor(100000) * Math.random())}>
+            {users.map((user, index) =>
+                    <tr key={Math.floor(Math.floor(Infinity) * Math.random())}>
                         <th>{index}</th>
                         <td>{`${user.name} ${user.surname} ${user.lastname}`}</td>
                         <td>{user.email}</td>
@@ -26,7 +33,8 @@ export const ListOfUsers = (props) => {
             </table> 
             : <h1 className="title">You have no users at this moment</h1>   
         }
-           
+
+            <Pagination userPerPage = {userPerPage} totalUsers={totalUsers} paginate={paginate}/>       
         </div>
     );
 }

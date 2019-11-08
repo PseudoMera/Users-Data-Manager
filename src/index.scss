@@ -44,7 +44,7 @@ html, body, #root {
 }
 
 .menu {
-    height:100vh;
+    height:100%;
     background:$gradient;
     width: 25vw;
     padding-top:2em;
@@ -88,6 +88,10 @@ li {
 
 li:hover {
     background-color: blue;
+}
+
+.table {
+    width: 70vw;
 }
 
 @media (max-width: 655px) {

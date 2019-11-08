@@ -93,6 +93,7 @@ export const AddUser = (props) => {
 
             <div className="field">
                 <div className="control">
+                    
                     <button className="button is-link"
                     onClick={
                         () => {
@@ -111,12 +112,13 @@ export const AddUser = (props) => {
                             user.civilStatus = values[9].value;
                             user.hasChilds = values[10].value;
                             user.birthday = values[11].value;
-                            console.log(user)
                             props.addUser(user);
                             for(let i in values) {
                                 if(isNaN(i)) break; 
                                 values[i].value = '';
                             }
+                            document.getElementsByClassName("useless-class")[0].classList.toggle("is-hidden");
+                            document.getElementsByClassName("second-useless-class")[0].classList.toggle("is-hidden");
                         }
                     }>Save</button>
                 </div>
